@@ -4,6 +4,7 @@
 // 3. Метод печати массива строк
 // 4. Метод печати двух массивов одинаковой длины рядом
 // 5. Метод удаления из массива строк цифр
+// 6. Метод подсчета количества пустых строк
 
 // 1. Метод создания массива строк
 string[] CreateArrayStrings(int size)
@@ -65,4 +66,19 @@ string[] RemoveNumbersFromArrayStrings(string[] text)
         }
     }
     return result;
+}
+
+// 6. Метод подсчета количества пустых строк
+int CountEmptyItems(string[] text)
+{
+    int count = 0;
+    int size = text.Length;
+    for (int i = 0; i < size; i++)
+    {
+        if (text[i] == null)
+        {
+            count++;
+        }
+    }
+    return count;
 }
