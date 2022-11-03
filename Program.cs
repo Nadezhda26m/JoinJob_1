@@ -7,6 +7,7 @@
 // 6. Метод подсчета количества пустых строк
 // 7. Метод удаления из массива пустых элементов
 
+#region Методы    
 // 1. Метод создания массива строк
 string[] CreateArrayStrings(int size)
 {
@@ -100,3 +101,4 @@ string[] RemoveEmptyItems(string[] text, int countNull)
     }
     return result;
 }
+#endregion Методы
