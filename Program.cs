@@ -102,3 +102,20 @@ string[] RemoveEmptyItems(string[] text, int countNull)
     return result;
 }
 #endregion Методы
+
+string chars = "abcdefghigklnopqrstuvwxyzFORNDLQCUM1234567890";
+string[] text = CreateArrayStrings(7);
+FillArrayStrings(text, chars, 4, 12);
+string[] result = RemoveNumbersFromArrayStrings(text);
+int nullStrings = CountEmptyItems(result);
+if (nullStrings > 0)
+{
+    string[] resultEnd = RemoveEmptyItems(result, nullStrings);
+    PrintArrayStrings(text);
+    Console.WriteLine();
+    PrintArrayStrings(resultEnd);
+}
+else
+{
+    Print2ArrayStrings(text, result);
+}
