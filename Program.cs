@@ -111,11 +111,13 @@ int nullStrings = CountEmptyItems(result);
 if (nullStrings > 0)
 {
     string[] resultEnd = RemoveEmptyItems(result, nullStrings);
+    Console.WriteLine("Исходный массив:");
     PrintArrayStrings(text);
-    Console.WriteLine();
+    Console.WriteLine("\nМассив без цифр:");
     PrintArrayStrings(resultEnd);
 }
 else
 {
+    Console.WriteLine("Исходный массив -> Массив без цифр");
     Print2ArrayStrings(text, result);
 }
